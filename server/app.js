@@ -59,7 +59,7 @@ app.get("/country/:iso", (req, res)=>{
     let page = parseInt(req.query.page) || 1;
     let pageSize = parseInt( req.query.pageSize ) || 40;
     let country = req.params.iso;
-    let url = `https://newsapi.org/v2/top-headlines?country=${country}&language=en&page=${page}&pageSize=${pageSize}&apiKey=${API_KEY}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${country}&page=${page}&pageSize=${pageSize}&apiKey=${API_KEY}`;
     fetchNews(url, res);
 })
 
